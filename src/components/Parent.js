@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Child from "./Child";
 
 let Parent = () => {
@@ -7,11 +7,11 @@ let Parent = () => {
 
     return (
         <div>
-
-            <Child
+            <h1>Parent Component</h1>
+            {isLoggedIn && <p>You are logged in!</p> || <Child
                 setIsLoggedIn={setIsLoggedIn}
-            />
-            {isLoggedIn && <h1>You are logged in!</h1>}
+            />}
+            
         </div>
     )
 }
